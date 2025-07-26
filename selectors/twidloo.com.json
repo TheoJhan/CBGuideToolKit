@@ -1,0 +1,29 @@
+[
+  {
+	"selector":"#signup_free-element-11",
+  "dialogText":"Campaign Email <br> email@mail-burst.com"
+},
+{
+	 
+	"selector":"#signup_free-element-12",
+	"dialogText":"Campaign Email <br> email@mail-burst.com"
+
+},
+{
+	 
+	"selector":"#signup_free-element-13",
+	"dialogText":"Directory Password"
+
+},
+{
+	 
+	"selector":"#signup_free-element-14",
+	"dialogText":"Directory Password"
+
+	},
+	 {
+
+    "selector": ".captchaContainer",
+"dialogText":"Resolve this captcha"
+  }
+]

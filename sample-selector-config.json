@@ -1,0 +1,10 @@
+[
+  {
+    "selector": ".sidebar",
+    "dialogContent": "this is a test"
+  },
+  {
+    "selector": "#test-container",
+    "dialogContent": "this is a test 2"
+  } 
+]

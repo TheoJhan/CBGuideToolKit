@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      width: 300px;
+      height: 300px;
+      background: #f8f9fa;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      border-bottom: 1px solid #e0e0e0;
+      padding: 12px 16px 10px 16px;
+      gap: 10px;
+    }
+    .header img {
+      width: 24px;
+      height: 24px;
+    }
+    .header-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #222;
+      letter-spacing: 0.5px;
+    }
+    .content {
+      flex: 1;
+      padding: 16px 16px 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer {
+      background: #fff;
+      border-top: 1px solid #e0e0e0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      padding: 8px 0 6px 0;
+      letter-spacing: 0.2px;
+    }
+    .toggle-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .toggle-label {
+      font-size: 1rem;
+      color: #333;
+      flex: 1;
+    }
+    /* Modern toggle switch */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 22px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background-color: #ccc;
+      transition: .3s;
+      border-radius: 22px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 2px;
+      bottom: 2px;
+      background-color: #fff;
+      transition: .3s;
+      border-radius: 50%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    }
+    input:checked + .slider {
+      background-color: #4caf50;
+    }
+    input:checked + .slider:before {
+      transform: translateX(18px);
+    }
+    .form-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .form-row label {
+      flex: 1;
+      font-size: 0.97rem;
+      color: #444;
+    }
+    select, input[type="color"], input[type="number"] {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 3px 6px;
+      font-size: 0.97rem;
+      background: #fff;
+      color: #222;
+    }
+    input[type="color"] {
+      padding: 0;
+      width: 32px;
+      height: 24px;
+      border: none;
+      background: none;
+    }
+    input[type="number"] {
+      width: 48px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="icons/icon16.png" alt="Logo">
+    <span class="header-title">CB Guide Toolkit</span>
+  </div>
+  <div class="content">
+    <div class="toggle-row">
+      <span class="toggle-label">Enable Dialogs</span>
+      <label class="switch">
+        <input type="checkbox" id="toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="form-row">
+      <label for="fontStyle">Font Style:</label>
+      <select id="fontStyle">
+        <option value="sans-serif">Sans-serif</option>
+        <option value="serif">Serif</option>
+        <option value="monospace">Monospace</option>
+        <option value="Arial, sans-serif">Arial</option>
+        <option value="Helvetica, sans-serif">Helvetica</option>
+        <option value="Tahoma, Geneva, sans-serif">Tahoma</option>
+        <option value="Verdana, Geneva, sans-serif">Verdana</option>
+        <option value="Trebuchet MS, sans-serif">Trebuchet MS</option>
+        <option value="Georgia, serif">Georgia</option>
+        <option value="Times New Roman, Times, serif">Times New Roman</option>
+        <option value="Courier New, Courier, monospace">Courier New</option>
+        <option value="Lucida Console, Monaco, monospace">Lucida Console</option>
+      </select>
+    </div>
+    <div class="form-row">
+      <label for="bgColor">Background:</label>
+      <input type="color" id="bgColor" value="#ffffff">
+    </div>
+    <div class="form-row">
+      <label for="fontSize">Font Size:</label>
+      <input type="number" id="fontSize" min="8" max="20" value="12">
+    </div>
+  </div>
+  <div class="footer">
+    Powered by Research Team J_KhunXX v1.0.0
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

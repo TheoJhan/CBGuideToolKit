@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Dialog Extension Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .test-section {
+            background: #f5f5f5;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .test-section h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        
+        .test-button {
+            background: #007cba;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .test-button:hover {
+            background: #005a87;
+        }
+        
+        .status-display {
+            background: #e8f4fd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #007cba;
+        }
+        
+        .feature-list {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .feature-list h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        
+        .feature-list ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .feature-list li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dynamic Dialog Extension Test Page</h1>
+    
+    <div class="test-section">
+        <h2>Extension Status</h2>
+        <div class="status-display" id="extensionStatus">
+            Checking extension status...
+        </div>
+        <button class="test-button" onclick="checkExtensionStatus()">Check Extension Status</button>
+        <button class="test-button" onclick="location.reload()">Reload Page</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>Target Elements for Testing</h2>
+        <p>This page contains various elements that can be targeted by the extension:</p>
+        
+        <div id="main-content">
+            <h3>Main Content Area</h3>
+            <p>This is the main content area with ID "main-content".</p>
+        </div>
+        
+        <div class="sidebar">
+            <h3>Sidebar</h3>
+            <p>This is a sidebar with class "sidebar".</p>
+        </div>
+        
+        <div id="test-container">
+            <h3>Test Container</h3>
+            <p>This is a test container with ID "test-container".</p>
+        </div>
+        
+        <div class="widget">
+            <h3>Widget</h3>
+            <p>This is a widget with class "widget".</p>
+        </div>
+    </div>
+    
+    <div class="feature-list">
+        <h3>New Popup Features to Test</h3>
+        <ul>
+            <li><strong>Dialog Toggle:</strong> Use the toggle switch in the popup to show/hide the dialog</li>
+            <li><strong>Background Color:</strong> Change the dialog's background color using the color picker</li>
+            <li><strong>Font Style:</strong> Select different font families from the dropdown</li>
+            <li><strong>Font Size:</strong> Adjust the font size using the number input (8-32px)</li>
+            <li><strong>Settings Persistence:</strong> Your settings will be saved and persist across browser sessions</li>
+            <li><strong>Real-time Updates:</strong> Changes apply immediately to all open tabs</li>
+        </ul>
+    </div>
+    
+    <div class="test-section">
+        <h2>Testing Instructions</h2>
+        <ol>
+            <li>Load the extension in Chrome (chrome://extensions/)</li>
+            <li>Click the extension icon to open the popup</li>
+            <li>Test the toggle button to show/hide the dialog</li>
+            <li>Try changing the background color, font style, and font size</li>
+            <li>Verify that settings persist when you close and reopen the popup</li>
+            <li>Test on different pages to ensure settings apply globally</li>
+        </ol>
+    </div>
+
+    <script>
+        function checkExtensionStatus() {
+            const statusDiv = document.getElementById('extensionStatus');
+            
+            // Check if extension is installed
+            if (typeof chrome !== 'undefined' && chrome.runtime && chrome.runtime.id) {
+                statusDiv.innerHTML = `
+                    <strong>Extension Status:</strong> Installed and Active<br>
+                    <strong>Extension ID:</strong> ${chrome.runtime.id}<br>
+                    <strong>Page URL:</strong> ${window.location.href}<br>
+                    <strong>Timestamp:</strong> ${new Date().toLocaleString()}
+                `;
+            } else {
+                statusDiv.innerHTML = `
+                    <strong>Extension Status:</strong> Not detected<br>
+                    <strong>Note:</strong> Make sure the extension is loaded in chrome://extensions/
+                `;
+            }
+        }
+        
+        // Check status on page load
+        window.addEventListener('load', checkExtensionStatus);
+    </script>
+</body>
+</html> 

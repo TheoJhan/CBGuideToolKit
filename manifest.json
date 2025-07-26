@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Per-Domain Dialog Injector",
+  "version": "1.0",
+  "description": "Injects dialog boxes based on domain-specific selectors.",
+  "permissions": ["scripting", "tabs", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon16.png",
+      "128": "icons/icon16.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["style.css"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["selectors/*.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

@@ -1,29 +1,40 @@
 [
   {
-	"selector":"#signup_free-element-11",
-  "dialogText":"Campaign Email <br> email@mail-burst.com"
-},
-{
-	 
-	"selector":"#signup_free-element-12",
-	"dialogText":"Campaign Email <br> email@mail-burst.com"
-
-},
-{
-	 
-	"selector":"#signup_free-element-13",
-	"dialogText":"Directory Password"
-
-},
-{
-	 
-	"selector":"#signup_free-element-14",
-	"dialogText":"Directory Password"
-
-	},
-	 {
-
+    "general": "Group1",
+    "dialogText": "Welcome to Twidloo Registration!<br><br><strong>Step 1:</strong> Fill in your email and password details.<br><br>• Use the campaign email provided<br>• Create a strong directory password<br>• Complete all required fields"
+  },
+  {
+    "selector": "#signup_free-element-11",
+    "dialogText": "Campaign Email<br>email@mail-burst.com",
+    "groupby": "1"
+  },
+  {
+    "selector": "#signup_free-element-12",
+    "dialogText": "Campaign Email<br>email@mail-burst.com",
+    "groupby": "1"
+  },
+  {
+    "selector": "#signup_free-element-13",
+    "dialogText": "Directory Password",
+    "groupby": "1"
+  },
+  {
+    "selector": "#signup_free-element-14",
+    "dialogText": "Directory Password",
+    "groupby": "1"
+  },
+  {
     "selector": ".captchaContainer",
-"dialogText":"Resolve this captcha"
+    "dialogText": "Resolve this captcha",
+    "groupby": "1"
+  },
+  {
+    "general": "Group2",
+    "dialogText": "Account Verification & Security<br><br><strong>Step 2:</strong> Complete the security check and verification process.<br><br>• Verify your email address<br>• Complete any captcha challenges<br>• Review terms and conditions"
+  },
+  {
+    "selector": ".view-listing-link",
+    "dialogText": "Redirect to Listing",
+    "groupby": "2"
   }
 ]

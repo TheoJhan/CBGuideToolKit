@@ -124,6 +124,48 @@
     input[type="number"] {
       width: 48px;
     }
+    .sync-status {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 8px;
+      margin-top: 8px;
+    }
+    .sync-status .status-text {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 4px;
+    }
+    .sync-status .last-update {
+      font-size: 0.8rem;
+      color: #888;
+    }
+    .update-btn, .show-dialog-btn {
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 6px;
+      width: 100%;
+    }
+    .update-btn:hover, .show-dialog-btn:hover {
+      background: #0056b3;
+    }
+    .update-btn:disabled, .show-dialog-btn:disabled {
+      background: #ccc;
+      cursor: not-allowed;
+    }
+    .show-dialog-btn {
+      background: #28a745;
+      margin-top: 4px;
+    }
+    .show-dialog-btn:hover {
+      background: #218838;
+    }
   </style>
 </head>
 <body>
@@ -163,6 +205,12 @@
     <div class="form-row">
       <label for="fontSize">Font Size:</label>
       <input type="number" id="fontSize" min="8" max="20" value="12">
+    </div>
+    <div class="sync-status">
+      <div class="status-text">GitHub Sync Status</div>
+      <div class="last-update" id="lastUpdate">Last update: Checking...</div>
+      <button class="update-btn" id="updateBtn">Update Now</button>
+      <button class="show-dialog-btn" id="showDialogBtn">Show General Dialog</button>
     </div>
   </div>
   <div class="footer">

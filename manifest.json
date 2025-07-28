@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Per-Domain Dialog Injector",
-  "version": "1.0",
-  "description": "Injects dialog boxes based on domain-specific selectors.",
+  "name": "CB Guide Toolkit",
+  "version": "1.0.0",
+  "description": "Per-Domain Dialog Injector with GitHub Integration and Local Caching",
   "permissions": ["scripting", "tabs", "storage"],
   "host_permissions": ["<all_urls>"],
   "action": {
@@ -20,13 +20,13 @@
     {
       "matches": ["<all_urls>"],
       "css": ["style.css"],
-      "js": ["content.js"],
+      "js": ["lib/idb.js", "content.js"],
       "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["selectors/*.json"],
+      "resources": ["lib/idb.js"],
       "matches": ["<all_urls>"]
     }
   ]

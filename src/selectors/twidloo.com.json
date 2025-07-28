@@ -1,0 +1,40 @@
+[
+  {
+    "general": "Group1",
+    "dialogText": "Welcome to Twidloo Registration!<br><br><strong>Step 1:</strong> Fill in your email and password details.<br><br>• Use the campaign email provided<br>• Create a strong directory password<br>• Complete all required fields"
+  },
+  {
+    "selector": "input[type='email']:first-of-type",
+    "dialogText": "Campaign Email<br>email@mail-burst.com",
+    "groupby": "1"
+  },
+  {
+    "selector": "input[type='email']:nth-of-type(2)",
+    "dialogText": "Confirm Email<br>Make sure it matches the first email",
+    "groupby": "1"
+  },
+  {
+    "selector": "input[type='password']:first-of-type",
+    "dialogText": "Create Password<br>Use a strong password",
+    "groupby": "1"
+  },
+  {
+    "selector": "input[type='password']:nth-of-type(2)",
+    "dialogText": "Confirm Password<br>Must match the first password",
+    "groupby": "1"
+  },
+  {
+    "selector": "input[placeholder*='Security'], input[name*='security'], input[id*='security']",
+    "dialogText": "Security Check<br>Complete the security verification",
+    "groupby": "1"
+  },
+  {
+    "general": "Group2",
+    "dialogText": "Account Verification & Security<br><br><strong>Step 2:</strong> Complete the security check and verification process.<br><br>• Verify your email address<br>• Complete any captcha challenges<br>• Review terms and conditions"
+  },
+  {
+    "selector": "button[type='submit'], input[type='submit'], .btn-primary, button:last-of-type",
+    "dialogText": "Create Profile<br>Click to complete registration",
+    "groupby": "2"
+  }
+]

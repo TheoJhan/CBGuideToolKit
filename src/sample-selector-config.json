@@ -1,0 +1,59 @@
+[
+  {
+    "general": "Group1",
+    "dialogText": "Welcome to Group 1!<br><br>This group contains instructions for the first set of form elements. Follow these steps carefully to complete the registration process."
+  },
+  {
+    "selector": "#signup_free-element-11",
+    "dialogText": "Campaign Email<br>email@mail-burst.com",
+    "groupby": "1"
+  },
+  {
+    "selector": "#signup_free-element-12",
+    "dialogText": "Campaign Email<br>email@mail-burst.com",
+    "groupby": "1"
+  },
+  {
+    "selector": "#signup_free-element-13",
+    "dialogText": "Directory Password",
+    "groupby": "1"
+  },
+  {
+    "selector": "#signup_free-element-14",
+    "dialogText": "Directory Password",
+    "groupby": "1"
+  },
+  {
+    "selector": ".captchaContainer",
+    "dialogText": "Resolve this captcha",
+    "groupby": "1"
+  },
+  {
+    "general": "Group2",
+    "dialogText": "Group 2 Instructions<br><br>This section covers the verification and submission process. Make sure all information is correct before proceeding."
+  },
+  {
+    "selector": ".verification-element",
+    "dialogText": "Verify your email address",
+    "groupby": "2"
+  },
+  {
+    "selector": ".submit-button",
+    "dialogText": "Click to submit your registration",
+    "groupby": "2"
+  },
+  {
+    "general": "Group3",
+    "dialogText": "Final Steps<br><br>Complete these final steps to finish your registration. Check your email for confirmation."
+  },
+  {
+    "selector": ".view-listing-link",
+    "dialogText": "Redirect to Listing",
+    "groupby": "3"
+  },
+  {
+    "selector": ".confirmation-message",
+    "dialogText": "Registration successful!",
+    "groupby": "3"
+  }
+]

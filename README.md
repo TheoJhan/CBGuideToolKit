@@ -17,11 +17,28 @@ A Chrome extension that injects dialog boxes based on domain-specific selectors 
 
 ## Installation
 
+### Development Version
 1. Clone or download this repository
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable "Developer mode"
 4. Click "Load unpacked" and select the extension folder
 5. The extension will automatically start syncing configurations from GitHub
+
+### Production Version (Obfuscated)
+1. Clone or download this repository
+2. Run the build process:
+   ```bash
+   npm install
+   npm run build
+   ```
+   Or use the provided batch file:
+   ```bash
+   build.bat
+   ```
+3. Open Chrome and go to `chrome://extensions/`
+4. Enable "Developer mode"
+5. Click "Load unpacked" and select the `dist` folder
+6. The obfuscated extension will automatically start syncing configurations from GitHub
 
 ## Configuration
 
@@ -125,6 +142,35 @@ The extension uses:
 - **GitHub API** for configuration management
 - **CSS Variables** for dynamic styling
 - **Event-driven Architecture** for real-time updates
+
+### Build Process
+
+The project includes a build system for code obfuscation:
+
+```bash
+# Install dependencies
+npm install
+
+# Build obfuscated version
+npm run build
+
+# Clean build directory
+npm run clean
+
+# Development mode with auto-rebuild
+npm run watch
+```
+
+### Obfuscation
+
+The build process uses `javascript-obfuscator` to protect the source code:
+- **Control Flow Flattening**: Makes code flow analysis difficult
+- **Dead Code Injection**: Adds meaningless code to confuse analysis
+- **String Array Encoding**: Encodes strings in base64
+- **Identifier Obfuscation**: Renames variables to hexadecimal
+- **Self Defending**: Prevents deobfuscation attempts
+
+The obfuscated files are placed in the `dist/` directory and are ready for distribution.
 
 ## Version History
 

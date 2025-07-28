@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CB Guide Toolkit Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-section {
+            margin: 30px 0;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .test-element {
+            margin: 10px 0;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 4px;
+        }
+        #signup_free-element-11 {
+            background: #e3f2fd;
+            padding: 15px;
+            border: 2px solid #2196f3;
+        }
+        #signup_free-element-12 {
+            background: #f3e5f5;
+            padding: 15px;
+            border: 2px solid #9c27b0;
+        }
+        #signup_free-element-13 {
+            background: #e8f5e8;
+            padding: 15px;
+            border: 2px solid #4caf50;
+        }
+        #signup_free-element-14 {
+            background: #fff3e0;
+            padding: 15px;
+            border: 2px solid #ff9800;
+        }
+        .captchaContainer {
+            background: #fce4ec;
+            padding: 15px;
+            border: 2px solid #e91e63;
+            border-radius: 8px;
+        }
+        .view-listing-link {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .view-listing-link:hover {
+            text-decoration: underline;
+        }
+        .status {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background: #4caf50;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .scroll-test {
+            height: 2000px;
+            background: linear-gradient(to bottom, #f0f0f0, #e0e0e0);
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="status" id="status">Loading...</div>
+    
+    <h1>CB Guide Toolkit Test Page</h1>
+    <p>This page tests the GitHub integration, dialog injection, and new general dialog functionality.</p>
+    
+    <div class="test-section">
+        <h2>General Dialog Test</h2>
+        <p>You should see a floating general dialog in the top-right corner with:</p>
+        <ul>
+            <li><strong>Group Navigation:</strong> Previous/Next buttons to switch between groups</li>
+            <li><strong>Draggable:</strong> Click and drag the header to move the dialog</li>
+            <li><strong>Fixed Position:</strong> Stays in place when scrolling</li>
+            <li><strong>Hideable:</strong> Click the × button to hide it</li>
+        </ul>
+    </div>
+    
+    <div class="test-section">
+        <h2>Regular Dialog Elements</h2>
+        <p>The following elements should trigger individual dialog boxes:</p>
+        
+        <div class="test-element">
+            <h3>Element 1 - Campaign Email</h3>
+            <div id="signup_free-element-11">
+                This element should show a dialog about Campaign Email
+            </div>
+        </div>
+        
+        <div class="test-element">
+            <h3>Element 2 - Campaign Email</h3>
+            <div id="signup_free-element-12">
+                This element should also show a dialog about Campaign Email
+            </div>
+        </div>
+        
+        <div class="test-element">
+            <h3>Element 3 - Directory Password</h3>
+            <div id="signup_free-element-13">
+                This element should show a dialog about Directory Password
+            </div>
+        </div>
+        
+        <div class="test-element">
+            <h3>Element 4 - Directory Password</h3>
+            <div id="signup_free-element-14">
+                This element should also show a dialog about Directory Password
+            </div>
+        </div>
+        
+        <div class="test-element">
+            <h3>Element 5 - Captcha</h3>
+            <div class="captchaContainer">
+                This element should show a dialog about resolving captcha
+            </div>
+        </div>
+        
+        <div class="test-element">
+            <h3>Element 6 - Listing Link</h3>
+            <a href="#" class="view-listing-link">Click here to redirect to listing</a>
+        </div>
+    </div>
+    
+    <div class="scroll-test">
+        <h2>Scroll Test Area</h2>
+        <p>Scroll down to test that:</p>
+        <ul>
+            <li>Regular dialogs move with their elements</li>
+            <li>General dialog stays fixed in position</li>
+            <li>General dialog remains draggable</li>
+        </ul>
+        <p>This area is intentionally long to test scrolling behavior.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+        <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Extension Status</h2>
+        <p>Check the browser console for extension logs and any errors.</p>
+        <p>Expected behavior:</p>
+        <ul>
+            <li>General dialog appears in top-right with group navigation</li>
+            <li>Regular dialog boxes appear beside the test elements</li>
+            <li>Dialogs alternate between left and right positions</li>
+            <li>Dialogs have speech bubble tails</li>
+            <li>Settings from the popup apply instantly</li>
+            <li>General dialog stays fixed when scrolling</li>
+        </ul>
+    </div>
+    
+    <script>
+        // Update status
+        function updateStatus(message) {
+            document.getElementById('status').textContent = message;
+        }
+        
+        // Check if extension is loaded
+        setTimeout(() => {
+            const regularDialogs = document.querySelectorAll('.citations-guide-dialog-v3');
+            const generalDialogs = document.querySelectorAll('.citations-guide-general-dialog');
+            
+            if (regularDialogs.length > 0 || generalDialogs.length > 0) {
+                updateStatus(`Extension Active - ${regularDialogs.length} regular, ${generalDialogs.length} general`);
+            } else {
+                updateStatus('Extension Not Found');
+            }
+        }, 2000);
+        
+        // Log page load
+        console.log('Test page loaded - waiting for extension...');
+    </script>
+</body>
+</html> 

@@ -1,0 +1,32 @@
+{
+  "compact": true,
+  "controlFlowFlattening": false,
+  "controlFlowFlatteningThreshold": 0.75,
+  "deadCodeInjection": false,
+  "deadCodeInjectionThreshold": 0.4,
+  "debugProtection": false,
+  "debugProtectionInterval": 0,
+  "disableConsoleOutput": false,
+  "identifierNamesGenerator": "hexadecimal",
+  "log": false,
+  "numbersToExpressions": false,
+  "renameGlobals": false,
+  "selfDefending": false,
+  "simplify": true,
+  "splitStrings": false,
+  "splitStringsChunkLength": 10,
+  "stringArray": true,
+  "stringArrayEncoding": ["base64"],
+  "stringArrayThreshold": 0.5,
+  "transformObjectKeys": false,
+  "unicodeEscapeSequence": false,
+  "target": "browser",
+  "reservedStrings": [
+    "chrome", "console", "fetch", "Promise", "async", "await", 
+    "indexedDB", "IDBRequest", "IDBTransaction", "IDBDatabase",
+    "addEventListener", "removeEventListener", "setInterval", "setTimeout"
+  ],
+  "exclude": [
+    "lib/idb.js"
+  ]
+} 

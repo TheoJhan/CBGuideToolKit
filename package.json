@@ -1,0 +1,29 @@
+{
+  "name": "cb-guide-toolkit",
+  "version": "1.0.0",
+  "description": "CB Guide Toolkit - Chrome Extension with GitHub Integration",
+  "main": "background.js",
+  "scripts": {
+    "build": "npm run obfuscate && npm run copy-assets",
+    "obfuscate": "javascript-obfuscator src/ --output dist/ --config obfuscator.config.json",
+    "copy-assets": "xcopy src\\icons dist\\icons\\ /E /I /Y && copy src\\manifest.json dist\\ && copy src\\popup.html dist\\ && copy src\\style.css dist\\ && copy src\\test-page.html dist\\ && xcopy src\\selectors dist\\selectors\\ /E /I /Y && xcopy src\\lib dist\\lib\\ /E /I /Y",
+    "clean": "if exist dist rmdir /s /q dist",
+    "dev": "npm run clean && npm run build",
+    "watch": "nodemon --watch src --ext js,html,css,json --exec 'npm run build'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "github-integration",
+    "dialog-injection",
+    "obfuscated"
+  ],
+  "author": "Research Team J_KhunXX",
+  "license": "MIT",
+  "devDependencies": {
+    "javascript-obfuscator": "^4.1.0",
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+} 

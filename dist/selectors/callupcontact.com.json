@@ -1,0 +1,78 @@
+{
+    "general": "Group1",
+    "dialogText": "Don’t forget to shorten your description before proceeding.<br>
+ The keyword field is for services—if there are no specific services, use the given category instead."
+  },  
+{
+    "selector": "name=[\"first_name\"]",
+    "dialogText": "business name"
+  },  
+{
+    "selector": "name=[\"keywords\"]",
+    "dialogText": "services"
+  },  
+    "selector": "class=".form-control.ui-autocomplete-input",
+    "dialogText": "country"
+  },  
+{
+    "selector": "name=[\"region\"]",
+    "dialogText": "state"
+  },  
+{
+    "selector": "name=[\"operatinghours\"]",
+    "dialogText": "hours"
+  },  
+{
+    "selector": "name=[\"description\"]",
+    "dialogText": "description <br>
+	LD shortened <br>
+https://convertcase.net/#google_vignette"
+  },  
+{
+    "selector": "name=[\"workphone\"]",
+    "dialogText": "phone"
+  },  
+{
+    "selector": "name=[\"mobile\"]",
+    "dialogText": "mobile"
+  },  
+{
+    "selector": "name=[\"email\"]",
+    "dialogText": "email"
+  },  
+{
+    "selector": "name=[\"fax\"]",
+    "dialogText": "fax"
+  },  
+{
+    "selector": "name=[\"website\"]",
+    "dialogText": "website"
+  },  
+{
+    "selector": "name=[\"street1\"]",
+    "dialogText": "address line 1"
+  },  
+{
+    "selector": "name=[\"street2\"]",
+    "dialogText": "address line 2"
+  },, 
+{
+    "selector": "name=[\"city\"]",
+    "dialogText": "city"
+  },  
+{
+    "selector": "name=[\"postal_code\"]",
+    "dialogText": "zipcode"
+  },  
+{
+    "selector": "name=[\"lon\"]",
+    "dialogText": "longtitude"
+  },  
+{
+    "selector": "name=[\"lat\"]",
+    "dialogText": "latitude"
+  },  
+{
+    "selector": "name=[\"update\"]",
+    "dialogText": "next page / procced / Update"
+  }

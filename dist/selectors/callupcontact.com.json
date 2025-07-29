@@ -10,7 +10,8 @@
 {
     "selector": "name=[\"keywords\"]",
     "dialogText": "services"
-  },  
+  },
+{  
     "selector": "class=".form-control.ui-autocomplete-input",
     "dialogText": "country"
   },  

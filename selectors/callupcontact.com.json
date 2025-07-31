@@ -1,7 +1,6 @@
 {
     "general": "Group1",
-    "dialogText": "Don’t forget to shorten your description before proceeding.<br>
- The keyword field is for services—if there are no specific services, use the given category instead."
+    "dialogText": "Don’t forget to shorten your description before proceeding.<br>The keyword field is for services—if there are no specific services, use the given category instead."
   },  
 {
     "selector": "name=[\"first_name\"]",
@@ -10,8 +9,9 @@
 {
     "selector": "name=[\"keywords\"]",
     "dialogText": "services"
-  },  
-    "selector": "class=".form-control.ui-autocomplete-input",
+  },
+{  
+    "selector": "class=.form-control.ui-autocomplete-input",
     "dialogText": "country"
   },  
 {
@@ -24,9 +24,7 @@
   },  
 {
     "selector": "name=[\"description\"]",
-    "dialogText": "description <br>
-	LD shortened <br>
-https://convertcase.net/#google_vignette"
+    "dialogText": "description:<br>LD shortened <br>https://convertcase.net/#google_vignette"
   },  
 {
     "selector": "name=[\"workphone\"]",

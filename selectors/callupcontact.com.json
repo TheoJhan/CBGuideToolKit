@@ -53,7 +53,7 @@
 {
     "selector": "name=[\"street2\"]",
     "dialogText": "address line 2"
-  },, 
+  },
 {
     "selector": "name=[\"city\"]",
     "dialogText": "city"
